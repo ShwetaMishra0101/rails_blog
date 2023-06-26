@@ -1,0 +1,28 @@
+<h1>All Posts</h1>
+<div class="ui  grid">
+  <div class="four column row">
+  <% @posts.each do |post| %>
+  <div class="column">
+        <div class="ui card">
+<% post.images.each do |image|   %>
+    <%= image_tag image.url  class: 'image' %>
+
+<% end %>
+  <%# </div> %>
+  <div class="content">
+       <a class="header"><h2><%= link_to post.title, post %></h2></a>
+    
+    <div class="description">
+  <%= post.content %>
+    </div>
+  </div>
+   </div>
+      </div>
+  
+  <% end %>
+    </div>
+</div>
+
+
+
+
